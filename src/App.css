@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(32, 37, 39);
+  color: white;
+}
+
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+.latest{
+display: flex;
+text-align: left;
+flex-wrap: wrap;
+
+}
+.animelatest{
+ width: 30%;
+  margin: 10px;
+}
+.animelatest img{
+  width: 250px;
+}
+.animelatest h2 {
+  width: 100%;
+}

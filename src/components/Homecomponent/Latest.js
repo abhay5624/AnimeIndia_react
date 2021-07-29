@@ -23,7 +23,7 @@ console.log("hii");
     }, [])
     return (
         <div>
-            <h1>Latest Anime</h1>
+            <h1 style = {{color: 'white'}}>Latest Anime</h1>
              <div className= 'latest'>
            {latest.map(anime => (
                 <Link to= {`/search/${anime.vid_id}`}>

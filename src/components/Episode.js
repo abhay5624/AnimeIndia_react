@@ -2,7 +2,7 @@ import React from 'react'
 import { useState , useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Animedata from './Animedata'
-const Anime = ({match}) => {
+const Episode = ({match}) => {
   const[animes, setAnime] = useState([21]);
    const [animedata, setAnimedata] = useState([21,22,33]);
     const fetchanime = async() => {
@@ -20,16 +20,16 @@ console.log(animedata);
 }
 useEffect(() => {
    fetchanime();
-  console.log(animes[0]); 
+   
 }, [])
 
     return (
         <div>
-            <Animedata ane={animedata} images={animes[0].cover} />
+            <Animedata ane={animedata} images={animes[0].cover}/>
             {
                 animes.map(anime => (
                <div>
-                   <Link to={`/episode/${anime.vid_id}`}>
+                   <Link to={`/search/${anime.vid_id}`}>
                    <h1 key={anime.vid_id}>{anime.episode}</h1>
                    <h3>Type: {anime.type}</h3>
                    <p>{anime.date}</p>
@@ -40,4 +40,5 @@ useEffect(() => {
     )
 }
 
-export default Anime
+export default Episode
+

@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Animedata = ({ane}) => {
+const Animedata = ({ane, images}) => {
 
     return (
         <div>
+            <img src={images} alt={ane[0].title2|+ 'images'} />
             <h1>{ane[0].title2}</h1>
             <h2>{ane[0].title}</h2>
             <p>{ane[0].description}</p>
